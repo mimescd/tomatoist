@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="tomatoistApp" ng-controller="tomatoistCtrl">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body id="body">
+        <div class = "jumbotron">TOMATOIST:  Pomadoro timer on top of Todoist, Task List</div>
+
+        <div id="loginContainer" class="center-block">
+            <label>Log in using your Todoist account</label>
+            <div class="form-group row">
+                <label class="col-md-6" for="usr">Username / Email:  </label>
+                <input class="col-md-6" id ="usr" type="email"/>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-6" for="pwd">Password:  </label>
+                <input class="col-md-6" id="pwd" type="password"/>
+
+            </div>
+            <input type="submit" onclick="loginModule.loginPub()"/>
+        </div>
+
+        <script>
+                    var app = angular.module("tomatoistApp", []);
+                    app.controller("tomatoistCtrl", function ($scope) {
+
+                    });
+        </script>
+        <script type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/angular.js"></script>
+        <script type="text/javascript" src="./js/angular-resource.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+    </body>
+</html>
