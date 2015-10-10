@@ -1,6 +1,6 @@
 angular.module("tomatoist")
-.controller("tomatoistCtrl", ['$scope', '$location', function($scope,$location){
-  $scope.loginVisible = false;
+.controller("tomatoistCtrl", ['$scope', '$location','dataInterface', function($scope,$location, dataInterface){
+ 
   $scope.test = "blah";
   $scope.changeView = function(view) {
     console.log("going to:  "+ view)
@@ -9,8 +9,6 @@ angular.module("tomatoist")
   $scope.changePartial = function(partial){
     $scope.currentPartial = partial;
   };
-  $scope.showLogin = function(){
-      $scope.loginVisible = true;
-  }
+  
   $scope.currentPartial = "introduction/introduction.html"
 }]);
