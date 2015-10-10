@@ -54,3 +54,27 @@ html, body{
   font-size:2em !important;
   
 }
+/* styles for login box*/
+.login-container{
+    color:black;
+}
+.login-panel-heading{
+    background-color:red !important;
+    color:white !important;
+}
+.login-panel-body{
+    color:black;
+}
+.btn-register{
+    color:red ;
+    background-color:white;
+    border-style:solid;
+    
+}
+.btn-login{
+    color:white;
+    background-color:red;
+}
+.floatItRight{
+    float:right;
+}

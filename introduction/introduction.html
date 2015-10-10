@@ -1,26 +1,47 @@
 <div ng-controller="introCtrl" class="intro-container">
-  Glory to superior beings, thanks Todoist team.
-  <div class="intro-big-banner row">
-    <h1 class='intro-header text-center'>Tomatoist</h1>
-    <h2 class="text-center">Focus and productivity tool
-    </h2>
-    <div class="text-center">Powered by TodoistAPI and Pomodoro method</div>
-  </div>
-
-  <div class="intro-row-container container ">
-    
-  <div class="intro-row row">
-
-    <div class="intro-column col-sm-6 col-md-6 col-lg-6" ng-repeat="column in data.columns">
-      <div class="column-container">
-        <div class="column">
-          <h2 class="column-lead text">{{column.lead}}</h2>
-
-          <div class="column-body">{{column.body}}</div>
-        </div>
-      </div>
+    Glory to superior beings, thanks Todoist team.
+    <div class="intro-big-banner row">
+        <h1 class='intro-header text-center'>Tomatoist</h1>
+        <h2 class="text-center">Focus and productivity tool
+        </h2>
+        <div class="text-center">Powered by TodoistAPI and Pomodoro method</div>
     </div>
-  </div>
-  </div>
-  <button ng-click="showLogin()" class="btn btn-block btn-productive">GET PRODUCTIVE</button>
+
+    <div class="intro-row-container container ">
+
+        <div class="intro-row row">
+
+            <div class="intro-column col-sm-6 col-md-6 col-lg-6" ng-repeat="column in data.columns">
+                <div class="column-container">
+                    <div class="column">
+                        <h2 class="column-lead text">{{column.lead}}</h2>
+
+                        <div class="column-body">{{column.body}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button ng-click="showLogin()"  ng-hide="loginVisible" class="btn btn-block btn-productive">GET PRODUCTIVE</button>
+    <div class="login-container" ng-show="loginVisible">
+        <div class="login -panel panel panel-primary">
+            <div class="login-panel-heading panel-heading text-lg">
+                <h3>Log in to your Todoist account.</h3>
+                <small class="btn-register-container floatItRight">
+                    <button class="btn btn-register" ng-click="goToTodoistSite()">Or go to their site and register.</button> 
+                </small>
+            </div>
+            <div class="login-panel-body panel-body">
+                <form novalidate class="login-form-group form-group">
+                    Username:
+                    <input type="text" id= "username" class=" form-control" ng-model="user.name" />
+                    <br /> Password:
+                    <input type="password" id="password" class=" form-control" ng-model="user.pwd" />
+                    <br />
+                    <input class="btn-login btn" type="submit" ng-click="" value="Log Me In!" />
+                </form>
+
+            </div>
+        </div>
+    </div>
 </div>
