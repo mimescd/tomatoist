@@ -1,5 +1,8 @@
 angular.module("tomatoist.introduction")
-        .controller('introCtrl', ['$scope', function($scope) {
+        .controller('introCtrl', ['$scope', 'dataInterface', function($scope, dataInterface) {
+                $scope.user = {};
+                $scope.user.email="";
+                $scope.user.pwd="";
                 $scope.goToTodoistSite = function(){
                     alert("Enjoy the hard work of the Todoist team!")
                     window.location.href = "https://todoist.com/";
@@ -10,6 +13,11 @@ angular.module("tomatoist.introduction")
                      $("html, body").animate({ scrollTop: $(document).height() }, "slow");
                     $("#username").focus();
                    
+                }
+                $scope.doLogin = function(){
+                    dataInterface.login($scope.user.email, $scope.user.pwd).then(function(result){
+                        alert(result.status)
+                    })
                 }
 
                 $scope.data = {"columns": [{

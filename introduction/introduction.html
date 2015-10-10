@@ -33,12 +33,12 @@
             </div>
             <div class="login-panel-body panel-body">
                 <form novalidate class="login-form-group form-group">
-                    Username:
-                    <input type="text" id= "username" class=" form-control" ng-model="user.name" />
+                    Email
+                    <input type="email" id= "username" class=" form-control" ng-model="user.email" />
                     <br /> Password:
                     <input type="password" id="password" class=" form-control" ng-model="user.pwd" />
                     <br />
-                    <input class="btn-login btn" type="submit" ng-click="" value="Log Me In!" />
+                    <input class="btn-login btn" type="submit" ng-click="doLogin()" value="Log Me In!" />
                 </form>
 
             </div>
