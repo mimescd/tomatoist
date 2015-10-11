@@ -38,10 +38,10 @@ angular.module("pomodoro.introduction")
                 };
 
                 $scope.data = {"columns": [{
-                            "lead": "The wondrous, rich features of the Todoist app",
-                            "body": "Combining the powerful tasklist using tasks YOU'VE ALREADY SET with a pomodoro timer and integrated timelog per task or task group, this is a powerful productivity tool for the serious Todoist."
+                            "lead": "A wondrous to-do list",
+                            "body": "Keep yourself on track to complete your goals--large and small"
                         }, {
-                            "lead": "The productivity powerhouse that is the pomodoro technique",
-                            "body": "Combining the powerful tasklist capabilities with a pomodoro timer and integrated timelog per task or task group, this is a powerful productivity tool for the serious Todoist"
+                            "lead": "The pomodoro technique",
+                            "body": "Keep yourself fresh while you chip away at your tasks, and view your timelog to see your prodctivity from the birds-eye."
                         }]};
             }])

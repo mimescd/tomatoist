@@ -9,7 +9,7 @@ and open the template in the editor.
 
     </div>
     <div class="panel-body container-fluid" >
-        <form novalidate class="register-form-group form-group row ">
+        <form name = "resgister-form" novalidate class="register-form-group form-group row ">
             email:
             <input type="Email" class="form-control" ng-model="user.email" required />
 
@@ -18,7 +18,9 @@ and open the template in the editor.
             <br /> Password:
             <input type="password" class="form-control" ng-model="user.pwd" required />
             <br />
-            <input class="register-submit-btn btn " type="submit" ng-click="registerUser()" value="Register Me!" />
+            <input class="register-submit-btn btn " ng-disabled="register-form.user.name.$dirty && register-form.user.name.$invalid ||  
+register-form.user.email.$dirty && register-form.user.email.$invalid || register-form.user.password.$dirty && register-form.user.password.$invalid" type="submit" ng-click="registerUser()" value="Register Me!" />
+            <span> Check the form, you must correct the above errors.</span>
         </form>
 
     </div>
