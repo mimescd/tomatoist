@@ -83,3 +83,14 @@ html, body{
     color:white;
     background-color:red;
 }
+
+.register-form-group{
+    padding:2%;
+}
+ .login-form-group input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+  .register-form-group input.ng-invalid.ng-touched{
+      background-color: #FA787E;
+  }
