@@ -6,9 +6,17 @@
 
 
 angular.module("pomodoro.introduction")
-.controller('registerCtrl', function($scope, $modalInstance) {
-
- 
+.controller('registerCtrl', ['$scope','dataInterface', '$modalInstance', function($scope, dataInterface, $modalInstance) {
+        $scope.user = {};
+        $scope.user.name ="";
+        $scope.user.email = "";
+        $scope.user.pwd = "";
+    $scope.registerUser = function() {
+                    dataInterface.register($scope.user).then(function(result) {
+                        console.log($scope.user)
+                        alert(result.data)
+                    })
+                }
 
     $scope.ok = function() {
       $modalInstance.close($scope.selected.item);
@@ -17,4 +25,4 @@ angular.module("pomodoro.introduction")
     $scope.cancel = function() {
       $modalInstance.dismiss('cancel');
     };
-  });
+  }]);

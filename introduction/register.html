@@ -5,22 +5,21 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <div class="register-container panel panel-primary">
-  <div class="register-heading panel-heading text-lg">Register!
-  
-  </div>
-  <div class="panel-body container-fluid" >
-    <form novalidate class="form-group row ">
-      First Name:
-       <input type="text" class="form-control" ng-model="newUser.fName" />
-       Last Name:
-       <input type="text" class="form-control " ng-model="newUser.lName" />
-      Username:
-      <input type="text" class="form-control" ng-model="newUser.name" />
-      <br /> Password:
-      <input type="password" class="form-control" ng-model="newUser.pwd" />
-      <br />
-      <input class="register-submit-btn btn " type="submit" ng-click="registerUser(newUser)" value="Register Me!" />
-    </form>
-  
-  </div>
+    <div class="register-heading panel-heading text-lg">Register!
+
+    </div>
+    <div class="panel-body container-fluid" >
+        <form novalidate class="register-form-group form-group row ">
+            email:
+            <input type="Email" class="form-control" ng-model="user.email" />
+
+            Username:
+            <input type="text" class="form-control" ng-model="user.name" />
+            <br /> Password:
+            <input type="password" class="form-control" ng-model="user.pwd" />
+            <br />
+            <input class="register-submit-btn btn " type="submit" ng-click="registerUser()" value="Register Me!" />
+        </form>
+
+    </div>
 </div>

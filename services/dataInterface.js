@@ -20,6 +20,22 @@ angular.module("pomodoro")
             status: result.status
           }
         })  
+    },
+    register: function(user) {
+        console.log(user);
+        return $http({
+    url: 'http://thecurtisplace.com/tomatoist/php/register.php',
+    method: "POST",
+    data: "username="+user.name+"&"+"email="+ user.email + "&password="+ user.pwd,
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    })
+        
+        .then(function(result) {
+          return {
+            data: result.data,
+            status: result.status
+          }
+        })  
     }
 
   }
