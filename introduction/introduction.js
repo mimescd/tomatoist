@@ -1,4 +1,4 @@
-angular.module("tomatoist.introduction",['ngRoute'])
+angular.module("pomodoro.introduction",['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   
   $routeProvider.when('/introduction', {

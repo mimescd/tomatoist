@@ -58,7 +58,7 @@ html, body{
 .login-container{
     color:black;
 }
-.login-panel-heading{
+.login-panel-heading, .register-heading{
     background-color:red !important;
     color:white !important;
 }
@@ -77,4 +77,9 @@ html, body{
 }
 .floatItRight{
     float:right;
+}
+
+.register-submit-btn{
+    color:white;
+    background-color:red;
 }

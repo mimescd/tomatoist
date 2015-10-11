@@ -1,5 +1,5 @@
-angular.module("tomatoist")
-.controller("tomatoistCtrl", ['$scope', '$location','dataInterface', function($scope,$location, dataInterface){
+angular.module("pomodoro")
+.controller("mainCtrl", ['$scope', '$location','dataInterface', function($scope,$location, dataInterface){
  
   $scope.test = "blah";
   $scope.changeView = function(view) {

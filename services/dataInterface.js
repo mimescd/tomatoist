@@ -1,4 +1,4 @@
-angular.module("tomatoist")
+angular.module("pomodoro")
         .factory("dataInterface", ["$http", function($http) {
   var apiString = "https://todoist.com/API/v6/";
   return {

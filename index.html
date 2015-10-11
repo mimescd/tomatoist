@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.js"></script>
-          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.js"></script>
-  <!--modules-->
-  <script src="script.js"></script>
-  <script src="introduction/introduction.js"></script>
-  
-  <!--controllers-->
-  <script src="tomatoistCtrl.js"></script>
-  <script src="introduction/introCtrl.js"></script>
-</head>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.js"></script>
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.js"></script>
+        <!--modules-->
+        <script src="script.js"></script>
+        <script src="introduction/introduction.js"></script>
 
-  <body ng-app="tomatoist">
-    
-    <div class="main-container" ng-controller="tomatoistCtrl">
-      <div class = "content-container" ng-view>
-        
-      </div>
-    </div>
-  </body>
+        <!--controllers-->
+        <script src="mainCtrl.js"></script>
+        <script src="introduction/introCtrl.js"></script>
+        <script src="introduction/registerCtrl.js"></script>
+        <!--services-->
+        <script src="services/dataInterface.js"></script>
+    </head>
+
+    <body ng-app="pomodoro">
+
+        <div class="main-container" ng-controller="mainCtrl">
+            <div class = "content-container" ng-view>
+
+            </div>
+        </div>
+    </body>
 
 </html>
