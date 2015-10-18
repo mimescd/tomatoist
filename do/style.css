@@ -1,0 +1,81 @@
+/* Styles go here */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.app-container {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+
+}
+
+.is-complete {
+  float: left;
+}
+
+.tasklist-container {
+  background-color: red;
+    height: 100%;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.task-del {
+  display:inline;
+}
+
+.task-edit {
+  display:inline;
+}
+
+.task-edit:hover,
+.task-del:hover {
+  color: red;
+  background-color: white;
+  cursor: pointer;
+}
+
+.task-add-enter {
+  color: red;
+}
+
+.task-add-text:focus {
+  color: red;
+}
+
+.todo-animate{
+  opacity:1;
+}
+.todo-animate.ng-enter, .todo-animate.ng-move{
+   transition:.5s linear all;
+  opacity:0;
+}
+.todo-animate.ng-enter-active, .todo-animate.ng-enter-active,
+.repeated-item.ng-move.ng-move-active {
+  opacity:1;
+}
+.todo-animate.ng-leave {
+  opacity:0;
+  animation:0.5s my_animation;
+}
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+.task-description{
+  color:red;
+  
+}
+.task-description:disabled{
+  color:white;
+  background-color:red;
+  border-style:none;
+}
+textarea{
+  resize:none;
+
+}

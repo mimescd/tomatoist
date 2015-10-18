@@ -1,0 +1,18 @@
+<div class="todo-container">
+<div class="add-task">
+    <input class="add-task-text" type="textbox" ng-model="newTodo">
+    <button ng-click="addTodo()" class="add-task-enter btn">Enter!
+    </button>
+</div>
+
+<div class=" todo-animate tasklist-container row " ng-repeat="task in tasks">
+    <input class="task-box col-md-2 col-sm-2 col-xs-2" type="checkbox" ng-model="task.isComplete" />
+
+
+    <textarea ng-model-options="{ updateOn: 'blur' }" ng-blur="task.edit = false" class="input task-description  col-md-6 col-sm-6 col-xs-6 " ng-disabled="task.edit ? notDisabled : disabled">{{task.description}}</textarea>
+
+    <div ng-click="edit($index)" class="task-edit col-md-2 col-sm-2 col-xs-2 text-center">Edit </div>
+    <div ng-click="remove($index)" class=" task-del col-md-2 col-sm-2 col-xs-2 text-center">Delete</div>
+
+</div>
+</div>
