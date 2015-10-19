@@ -15,7 +15,7 @@ class UserEntry {
             echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
         }
         echo $mysqli->host_info . "\n";
-        
+
 
         if (!($stmt = $mysqli->prepare("INSERT INTO `user` (username, email, password, tasklist_id) VALUES (?,?,?,?)"))) {
             echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
@@ -58,12 +58,18 @@ class UserEntry {
 
     public function toArray() {
         //return an array version of the todo item
+        /*
+         * 
+          public $userId;
+          public $email;
+          public $password;
+          public $taskListId;
+         */
         return array(
-            'todo_id' => $this->todo_id,
-            'title' => $this->title,
-            'description' => $this->description,
-            'due_date' => $this->due_date,
-            'is_done' => $this->is_done
+            'userId' => $this->userId,
+            'email' => $this->email,
+            'password' => $this->password,
+            'taskListId' => $this->taskListId
         );
     }
 

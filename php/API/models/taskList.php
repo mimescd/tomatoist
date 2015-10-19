@@ -19,7 +19,7 @@ class TaskList {
         
         
 
-        if (!($stmt = $mysqli->prepare("INSERT INTO `taskList` (userId, todos,  taskListName) VALUES (?,?,?)"))) {
+        if (!($stmt = $mysqli->prepare("INSERT INTO `taskList` (user_id, todos,  tasklist_name) VALUES (?,?,?)"))) {
             echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
         }
         $id = 1;
@@ -39,11 +39,9 @@ class TaskList {
     public function toArray() {
         //return an array version of the todo item
         return array(
-            'todo_id' => $this->todo_id,
-            'title' => $this->title,
-            'description' => $this->description,
-            'due_date' => $this->due_date,
-            'is_done' => $this->is_done
+            'userId' => $this->userId,
+            'todos' => $this->todos,
+            'taskListName' => $this->taskListName
         );
     }
 
