@@ -1,58 +1,58 @@
 /* Styles go here */
 
 html, body{
-  height:100%;
+    height:100%;
 }
 
 .main-container{
-  background-color:red;
-  color:white;
-  height:100%;
+    background-color:red;
+    color:white;
+    height:100%;
 }
 .content-container{
-  height:100%;
+    height:100%;
 }
 
 /* introduction styles  */
 .intro-container{
-  height:100%;
+    height:100%;
 }
 .intro-header{
-  color:red;
+    color:red;
 }
 .intro-big-banner{
-  color:black;
-  background-color:white;
-  height:25%;
-  padding-top:1%;
-  padding-bottom:1%;
-  border-bottom-style:solid;
-  border-color:red;
+    color:black;
+    background-color:white;
+    height:25%;
+    padding-top:1%;
+    padding-bottom:1%;
+    border-bottom-style:solid;
+    border-color:red;
 }
 
 .intro-row{
-  max-height:100%;
-  background-color:white;
+    max-height:100%;
+    background-color:white;
 }
 .intro-row-container{
     width:100% !important;
 }
 .column-container{
-  height:100%;
-  color:black;
+    height:100%;
+    color:black;
 }
 .column-lead{
-  color:red;
+    color:red;
 
 }
 .column-body{
-  word-spacing:.11em;
+    word-spacing:.11em;
 }
 .btn-productive{
-  color:red;
-  background-color:white;
-  font-size:2em !important;
-  
+    color:red;
+    background-color:white;
+    font-size:2em !important;
+
 }
 /* styles for login box*/
 .login-container{
@@ -69,7 +69,7 @@ html, body{
     color:red ;
     background-color:white;
     border-style:solid;
-    
+
 }
 .btn-login{
     color:white;
@@ -87,10 +87,94 @@ html, body{
 .register-form-group{
     padding:2%;
 }
- .login-form-group input.ng-invalid.ng-touched {
+.login-form-group input.ng-invalid.ng-touched {
     background-color: #FA787E;
-  }
+}
 
-  .register-form-group input.ng-invalid.ng-touched{
-      background-color: #FA787E;
-  }
+.register-form-group input.ng-invalid.ng-touched{
+    background-color: #FA787E;
+}
+/*
+STYLE'S FOR TODO MODULEs'
+
+*/
+.add-task{
+    
+}
+.add-task-text{
+    color:red;
+    background-color:white;
+}
+.todo-container{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+.do-container {
+    background-color: red;
+    /* height: 100%; */
+    width: 100%;
+    margin-top: 5px;
+}
+.tasklist-container{
+/*      background-color: red;*/
+    /* height: 100%; */
+    width: 50%;
+   
+}
+
+.task-del {
+    display:inline;
+}
+
+.task-edit {
+    display:inline;
+}
+
+.task-edit:hover,
+.task-del:hover {
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+
+.task-add-enter {
+    color: red;
+}
+
+.task-add-text:focus {
+    color: red;
+}
+
+.todo-animate{
+    opacity:1;
+}
+.todo-animate.ng-enter, .todo-animate.ng-move{
+    transition:.5s linear all;
+    opacity:0;
+}
+.todo-animate.ng-enter-active, .todo-animate.ng-enter-active,
+.repeated-item.ng-move.ng-move-active {
+    opacity:1;
+}
+.todo-animate.ng-leave {
+    opacity:0;
+    animation:0.5s my_animation;
+}
+@keyframes my_animation {
+    from { opacity:1; }
+    to { opacity:0; }
+}
+.task-description{
+    color:red;
+
+}
+.task-description:disabled{
+    color:white;
+    background-color:red;
+    border-style:none;
+}
+textarea{
+    resize:none;
+
+}
