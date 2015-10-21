@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html ng-app="tomatoistApp" ng-controller="tomatoistCtrl">
+<html>
+
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-animate.js"></script>
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.js"></script>
+        <!--modules-->
+        <script src="pomodoro.js"></script>
+        <script src="introduction/introduction.js"></script>
+<!--        <script src="home/home.js"></script>-->
+        <script src="do/todo.js"></script>
+        <!--controllers-->
+        <script src="mainCtrl.js"></script>
+        <script src="introduction/introCtrl.js"></script>
+        <script src="introduction/registerCtrl.js"></script>
+        <!--<script src="home/homeCtrl.js"></script>-->
+        <script src="do/todoCtrl.js"></script>
+        <!--services-->
+        <script src="services/dataInterface.js"></script>
     </head>
-    <body id="body">
-        <div class = "jumbotron">TOMATOIST:  Pomadoro timer on top of Todoist, Task List</div>
 
-        <div id="loginContainer" class="center-block">
-            <label>Log in using your Todoist account</label>
-            <div class="form-group row">
-                <label class="col-md-6" for="usr">Username / Email:  </label>
-                <input class="col-md-6" id ="usr" type="email"/>
-            </div>
-            <div class="form-group row">
-                <label class="col-md-6" for="pwd">Password:  </label>
-                <input class="col-md-6" id="pwd" type="password"/>
+    <body ng-app="pomodoro">
+
+        <div class="main-container" ng-controller="mainCtrl">
+            <div class = "content-container" ng-view>
 
             </div>
-            <input type="submit"/>
         </div>
-
-        <script>
-                    var app = angular.module("tomatoistApp", []);
-                    app.controller("tomatoistCtrl", function ($scope) {
-
-                    });
-        </script>
-        <script type="text/javscript" src="main.js"></script>
     </body>
+
 </html>
