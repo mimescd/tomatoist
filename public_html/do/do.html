@@ -1,0 +1,29 @@
+
+<div class="todo-container">
+<div class="add-task">
+    <input class="add-task-text" type="textbox" ng-model="newTodo">
+    <button ng-click="addTodo()" class="add-task-enter btn">Enter!
+    </button>
+</div>
+
+  <div class=" todo-animate tasklist-container" ng-repeat="task in tasks">
+        <div  class="row" >
+        <input class="task-box col-md-1 col-sm-1 col-xs-1" type="checkbox" ng-model="task.isComplete" />
+
+
+        <textarea ng-model-options="{ updateOn: 'blur' }" ng-blur="task.edit = false" class="input task-description  col-md-8 col-sm-8 col-xs-8 " ng-disabled="task.edit ? notDisabled : disabled ">{{task.description}} {{task.isComplete}}</textarea>
+
+        <div ng-click="edit($index)" class="task-edit col-md-1 col-sm-1 col-xs-1 text-center">Edit </div>
+        <span class="col-md-1 col-sm-1 col-xs-1 "></span>
+        <div ng-click="remove($index)" class=" task-del col-md-1 col-sm-1 col-xs-1 text-center">Delete</div>
+        </div>
+        <div class="time-container row">
+          <button ng-disabled="task.timerRunning ? disabled : notDisabled  " ng-click="startWork($index)" class="col-md-2 col-sm-2  task-start">Start</button>
+          <button ng-disabled="task.timerRunning ? notDisabled : disabled " ng-click="pauseWork($index)" class="col-md-2 col-sm-2   task-pause">Pause</button>
+          <button ng-disabled="task.timerRunning ? notDisabled : disabled " ng-click="stopWork($index)" class="col-md-2 col-sm-2   task-pause">Reset</button>
+          <div class="col-md-4 col-sm-4 ">Session Time Remaining: {{task.timeLeftInSession | filter:minutesAndSeconds}}</div>
+          <div class="col-md-2 col-sm-2 ">Total Time: {{task.timeWorked | filter: minutesAndSeconds}}</div>
+          <div class=" col-md-2 col-sm-2 ">Pomodoros: {{task.timeWorked | filter: pomodoros}}</div>
+        </div>
+      </div>
+</div>
